@@ -21,6 +21,8 @@ public class Main
      input2 = scan.nextInt();
          int count = 0;
          int largest_number = 0;
+
+    int input3;
     while (count <= input2)
     {
        System.out.println("Enter a Score");
@@ -31,6 +33,30 @@ public class Main
         }
         count++;
         }
+        System.out.println("The largest number is "+ largest_number);
+        scan.nextLine();
+      String userword ="";
+      System.out.println("Input a word");
+     userword = scan.nextLine();
+    int index = 0;
+    int counter = 1;
+    String currentLetter = "";
+    while (index < userword.length())
+    {
+        if ( counter == 3)
+        {
+          counter = 1;
+      
+        }
+        else {
+          currentLetter += userword.substring(index, index + 1);
+            counter++;
+        }
+          
+          index++;        
+
+    }
+    System.out.println(currentLetter);
     }
   }
 
